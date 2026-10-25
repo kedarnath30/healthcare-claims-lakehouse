@@ -1,0 +1,42 @@
+{
+  "layer": "silver",
+  "format": "delta",
+  "seconds": 791.6,
+  "tables": [
+    {
+      "table": "member_year",
+      "rows": 343644
+    },
+    {
+      "table": "member",
+      "rows": 116352
+    },
+    {
+      "table": "member_month",
+      "rows": 3856556
+    },
+    {
+      "table": "claim_header",
+      "rows": 3216909
+    },
+    {
+      "table": "claim_diagnosis",
+      "rows": 7666162
+    },
+    {
+      "table": "_rejects_claims",
+      "rows": 278
+    },
+    {
+      "table": "icd9_dx",
+      "rows": 14567
+    }
+  ],
+  "dq": {
+    "generated_at_utc": "2026-10-25T08:12:26+00:00",
+    "checks": 27,
+    "pass": 26,
+    "warn": 1,
+    "fail": 0
+  }
+}
