@@ -1,0 +1,28 @@
+layer,table,check,metric,value,threshold,status,severity,detail
+silver,member_year,row_reconciliation,unexplained_row_gap,0,= 0,PASS,error,"source=343,644 target=343,644 explained_drops=0; dropped = duplicate member-year rows"
+silver,member_year,duplicate_keys,member_id+coverage_year,0,= 0,PASS,error,
+silver,member,duplicate_keys,member_id,0,= 0,PASS,error,
+silver,member_month,duplicate_keys,member_id+month_start,0,= 0,PASS,error,
+silver,member_year,null_rate,member_id,0.0,<= 0.0,PASS,error,
+silver,member_year,null_rate,member_key,0.0,<= 0.0,PASS,error,
+silver,member_year,null_rate,birth_dt,0.0,<= 0.0,PASS,error,
+silver,member_year,null_rate,sex,0.0,<= 0.0,PASS,error,
+silver,claim_header[IP],row_reconciliation,unexplained_row_gap,0,= 0,PASS,error,"source=66,773 target=66,705 explained_drops=68; exact_dups=0, segments_collapsed=68, rejects=0"
+silver,claim_header[IP],amount_reconciliation,paid_bronze - paid_silver,0.0,= 0,PASS,error,"bronze=639,260,180.00 silver=639,260,180.00"
+silver,claim_header[OP],row_reconciliation,unexplained_row_gap,0,= 0,PASS,error,"source=790,790 target=779,537 explained_drops=11,253; exact_dups=0, segments_collapsed=10,975, rejects=278"
+silver,claim_header[OP],amount_reconciliation,paid_bronze - paid_silver,0.0,= 0,PASS,error,"bronze=224,132,390.00 silver=224,132,390.00"
+silver,claim_header[CAR],row_reconciliation,unexplained_row_gap,0,= 0,PASS,error,"source=2,370,667 target=2,370,667 explained_drops=0; exact_dups=0, segments_collapsed=0, rejects=0"
+silver,claim_header,duplicate_keys,claim_id+claim_type,0,= 0,PASS,error,
+silver,claim_header,null_rate,claim_id,0.0,<= 0.0,PASS,error,
+silver,claim_header,null_rate,member_id,0.0,<= 0.0,PASS,error,
+silver,claim_header,null_rate,claim_from_dt,0.0,<= 0.0,PASS,error,
+silver,claim_header,null_rate,paid_amt,0.0,<= 0.0,PASS,error,
+silver,claim_header,null_rate,provider_id,0.001416,<= 0.05,PASS,warn,
+silver,claim_header,null_rate,principal_dx,3.8e-05,<= 0.05,PASS,warn,
+silver,claim_header,referential_integrity,member_id -> member_year.member_id,0.0,orphan rate <= 0.0,PASS,error,"0 orphan rows of 3,216,909"
+silver,claim_diagnosis,referential_integrity,claim_id -> claim_header.claim_id,0.0,orphan rate <= 0.0,PASS,error,"0 orphan rows of 7,666,162"
+silver,claim_header,value_range,paid_amt < 0 rows,2612,= 0,WARN,warn,
+silver,claim_header,value_range,from_dt outside 2007-01-01..2010-12-31,0,= 0,PASS,warn,
+silver,claim_diagnosis,icd9_validity,invalid_code_rate,6.7e-05,<= 0.01,PASS,warn,"516 of 7,666,162"
+silver,claim_diagnosis,referential_integrity,icd9_code -> CMS ICD-9 v32 reference,0.02687,<= 0.10,PASS,warn,"205,992 of 7,666,162 codes not in the FY2015 billable list (3-digit/retired codes)"
+silver,claim_header,eligibility_coverage,claims outside covered member-months,0.006676,<= 0.05,PASS,warn,"21,477 claims (synthetic data perturbs coverage months)"
