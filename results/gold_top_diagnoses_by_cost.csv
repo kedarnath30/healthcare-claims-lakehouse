@@ -1,0 +1,26 @@
+principal_dx,claims,members,paid_total,paid_ip,paid_op,paid_carrier,cost_rank,share_of_total_paid,paid_per_claim,icd9_display,description,icd9_chapter
+V5789,2723,2606,28648520.00,28421550.00,216560.00,10410.00,1,0.0268,10520.94,V57.89,Care involving other specified rehabilitation procedure,Supplementary (V codes)
+41401,5143,4773,24530140.00,23909800.00,255480.00,364860.00,2,0.0229,4769.62,414.01,Coronary atherosclerosis of native coronary artery,Circulatory system
+0389,1855,1788,24483930.00,24438390.00,16830.00,28710.00,3,0.0229,13198.88,038.9,Unspecified septicemia,Infectious & parasitic
+486,2805,2695,17149040.00,17106560.00,18780.00,23700.00,4,0.0160,6113.74,486,"Pneumonia, organism unspecified",Respiratory system
+41071,1293,1251,14859270.00,14838630.00,5900.00,14740.00,5,0.0139,11492.09,410.71,"Subendocardial infarction, initial episode of care",Circulatory system
+51881,1871,1763,14472240.00,14286900.00,23230.00,162110.00,6,0.0135,7735.03,518.81,Acute respiratory failure,Respiratory system
+71536,2299,2222,13282060.00,13145020.00,49330.00,87710.00,7,0.0124,5777.32,715.36,"Osteoarthrosis, localized, not specified whether primary or secondary, lower leg",Musculoskeletal & connective tissue
+4280,3657,3355,11334330.00,11072900.00,103760.00,157670.00,8,0.0106,3099.35,428.0,"Congestive heart failure, unspecified",Circulatory system
+49121,4387,3936,10282570.00,10005100.00,123950.00,153520.00,9,0.0096,2343.87,491.21,Obstructive chronic bronchitis with (acute) exacerbation,Respiratory system
+5849,2849,2617,8851910.00,8624900.00,36340.00,190670.00,10,0.0083,3107.02,584.9,"Acute kidney failure, unspecified",Genitourinary system
+5070,2084,1886,8826320.00,8624900.00,54430.00,146990.00,11,0.0082,4235.28,507.0,Pneumonitis due to inhalation of food or vomitus,Respiratory system
+43491,1765,1679,8511730.00,8402820.00,47260.00,61650.00,12,0.0079,4822.51,434.91,"Cerebral artery occlusion, unspecified with cerebral infarction",Circulatory system
+42731,9169,7306,8359430.00,7781500.00,226200.00,351730.00,13,0.0078,911.71,427.31,Atrial fibrillation,Circulatory system
+5990,2990,2870,7664710.00,7543360.00,65310.00,56040.00,14,0.0072,2563.45,599.0,"Urinary tract infection, site not specified",Genitourinary system
+4241,863,851,6280670.00,6173000.00,39160.00,68510.00,15,0.0059,7277.72,424.1,Aortic valve disorders,Circulatory system
+78659,18796,14343,5954470.00,2488990.00,1941700.00,1523780.00,16,0.0056,316.79,786.59,Other chest pain,Symptoms & ill-defined conditions
+7802,14987,11656,5870370.00,3282500.00,1323790.00,1264080.00,17,0.0055,391.70,780.2,Syncope and collapse,Symptoms & ill-defined conditions
+82021,870,827,5776390.00,5722000.00,15210.00,39180.00,18,0.0054,6639.53,820.21,Closed fracture of intertrochanteric section of neck of femur,Injury & poisoning
+51884,1369,1283,5458210.00,5281000.00,23240.00,153970.00,19,0.0051,3987.01,518.84,Acute and chronic respiratory failure,Respiratory system
+4019,75027,39303,5201090.00,564100.00,1562740.00,3074250.00,20,0.0049,69.32,401.9,Unspecified essential hypertension,Circulatory system
+42781,8524,6678,5099370.00,4484300.00,251680.00,363390.00,21,0.0048,598.24,427.81,Sinoatrial node dysfunction,Circulatory system
+71535,1556,1518,4936270.00,4798000.00,37660.00,100610.00,22,0.0046,3172.41,715.35,"Osteoarthrosis, localized, not specified whether primary or secondary, pelvic region and thigh",Musculoskeletal & connective tissue
+42823,2782,2603,4853440.00,4598100.00,99240.00,156100.00,23,0.0045,1744.59,428.23,Acute on chronic systolic heart failure,Circulatory system
+4011,74752,39281,4625900.00,0.00,1541800.00,3084100.00,24,0.0043,61.88,401.1,Benign essential hypertension,Circulatory system
+78650,18377,13945,4604700.00,1186180.00,1879320.00,1539200.00,25,0.0043,250.57,786.50,"Chest pain, unspecified",Symptoms & ill-defined conditions
