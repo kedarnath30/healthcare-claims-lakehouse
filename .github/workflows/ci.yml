@@ -1,0 +1,50 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: pip install -r requirements.txt ruff
+
+      - name: Lint
+        run: ruff check src tests dags scripts --select E9,F63,F7,F82
+
+      - name: Unit tests (PySpark transforms)
+        run: pytest -q tests
+
+      - name: Compile notebooks, scripts and SQL runner
+        run: python -m py_compile notebooks/databricks/*.py scripts/*.py src/*.py src/lakehouse/*.py
+
+  airflow-dag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Airflow (official constraints)
+        run: |
+          AIRFLOW_VERSION=2.10.4
+          PY=$(python -c 'import sys; print(f"{sys.version_info.major}.{sys.version_info.minor}")')
+          pip install "apache-airflow==${AIRFLOW_VERSION}" \
+            --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PY}.txt"
+      - name: DAG import check
+        run: python scripts/check_dag.py
