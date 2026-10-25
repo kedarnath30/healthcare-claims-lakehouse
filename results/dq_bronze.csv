@@ -1,0 +1,22 @@
+layer,table,check,metric,value,threshold,status,severity,detail
+bronze,beneficiary,row_count,rows,343644,>= 1,PASS,error,
+bronze,beneficiary,quarantined_rows,rows,0,= 0,PASS,warn,
+bronze,beneficiary,row_reconciliation,unexplained_row_gap,0,= 0,PASS,error,"source=343,644 target=343,644 explained_drops=0; raw CSV data lines vs loaded+quarantined"
+bronze,beneficiary,null_rate,DESYNPUF_ID,0.0,<= 0.0,PASS,error,
+bronze,beneficiary,duplicate_keys,DESYNPUF_ID+bene_year,0,= 0,PASS,error,
+bronze,inpatient,row_count,rows,66773,>= 1,PASS,error,
+bronze,inpatient,quarantined_rows,rows,0,= 0,PASS,warn,
+bronze,inpatient,row_reconciliation,unexplained_row_gap,0,= 0,PASS,error,"source=66,773 target=66,773 explained_drops=0; raw CSV data lines vs loaded+quarantined"
+bronze,inpatient,null_rate,CLM_ID,0.0,<= 0.0,PASS,error,
+bronze,inpatient,duplicate_keys,CLM_ID+SEGMENT,0,= 0,PASS,error,
+bronze,outpatient,row_count,rows,790790,>= 1,PASS,error,
+bronze,outpatient,quarantined_rows,rows,0,= 0,PASS,warn,
+bronze,outpatient,row_reconciliation,unexplained_row_gap,0,= 0,PASS,error,"source=790,790 target=790,790 explained_drops=0; raw CSV data lines vs loaded+quarantined"
+bronze,outpatient,null_rate,CLM_ID,0.0,<= 0.0,PASS,error,
+bronze,outpatient,duplicate_keys,CLM_ID+SEGMENT,0,= 0,PASS,error,
+bronze,carrier,row_count,rows,2370667,>= 1,PASS,error,
+bronze,carrier,quarantined_rows,rows,0,= 0,PASS,warn,
+bronze,carrier,row_reconciliation,unexplained_row_gap,0,= 0,PASS,error,"source=2,370,667 target=2,370,667 explained_drops=0; raw CSV data lines vs loaded+quarantined"
+bronze,carrier,null_rate,CLM_ID,0.0,<= 0.0,PASS,error,
+bronze,carrier,duplicate_keys,CLM_ID,0,= 0,PASS,error,
+bronze,inpatient,schema_enforcement,delta_rejects_drift,True,True,PASS,error,[_LEGACY_ERROR_TEMP_DELTA_0007] A schema mismatch detected when writing to the Delta table (Table ID: 1bc97df2-a309-4848-875e-3356fce573d5).
