@@ -1,0 +1,22 @@
+{
+  "layer": "bronze",
+  "format": "delta",
+  "seconds": 174.5,
+  "tables": [
+    {
+      "table": "carrier",
+      "files": [
+        "DE1_0_2008_to_2010_Carrier_Claims_Sample_1A.csv"
+      ],
+      "rows_loaded": 2370667,
+      "rows_quarantined": 0
+    }
+  ],
+  "dq": {
+    "generated_at_utc": "2026-10-23T18:57:52+00:00",
+    "checks": 21,
+    "pass": 21,
+    "warn": 0,
+    "fail": 0
+  }
+}
