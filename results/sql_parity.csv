@@ -1,0 +1,7 @@
+mart,rows_sql,rows_pyspark,mismatched_rows,status
+pmpm_monthly,36,36,0,PASS
+pmpm_by_risk_segment,12,12,0,PASS
+readmission_index_stays,66705,66705,0,PASS
+readmission_summary,22,22,0,PASS
+top_diagnoses_by_cost,50,50,0,PASS
+provider_utilization,506983,506983,0,PASS
