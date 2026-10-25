@@ -1,0 +1,308 @@
+{
+  "summary": {
+    "generated_at_utc": "2026-10-25T08:12:26+00:00",
+    "checks": 27,
+    "pass": 26,
+    "warn": 1,
+    "fail": 0
+  },
+  "checks": [
+    {
+      "layer": "silver",
+      "table": "member_year",
+      "check": "row_reconciliation",
+      "metric": "unexplained_row_gap",
+      "value": 0,
+      "threshold": "= 0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": "source=343,644 target=343,644 explained_drops=0; dropped = duplicate member-year rows"
+    },
+    {
+      "layer": "silver",
+      "table": "member_year",
+      "check": "duplicate_keys",
+      "metric": "member_id+coverage_year",
+      "value": 0,
+      "threshold": "= 0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "silver",
+      "table": "member",
+      "check": "duplicate_keys",
+      "metric": "member_id",
+      "value": 0,
+      "threshold": "= 0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "silver",
+      "table": "member_month",
+      "check": "duplicate_keys",
+      "metric": "member_id+month_start",
+      "value": 0,
+      "threshold": "= 0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "silver",
+      "table": "member_year",
+      "check": "null_rate",
+      "metric": "member_id",
+      "value": 0.0,
+      "threshold": "<= 0.0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "silver",
+      "table": "member_year",
+      "check": "null_rate",
+      "metric": "member_key",
+      "value": 0.0,
+      "threshold": "<= 0.0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "silver",
+      "table": "member_year",
+      "check": "null_rate",
+      "metric": "birth_dt",
+      "value": 0.0,
+      "threshold": "<= 0.0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "silver",
+      "table": "member_year",
+      "check": "null_rate",
+      "metric": "sex",
+      "value": 0.0,
+      "threshold": "<= 0.0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "silver",
+      "table": "claim_header[IP]",
+      "check": "row_reconciliation",
+      "metric": "unexplained_row_gap",
+      "value": 0,
+      "threshold": "= 0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": "source=66,773 target=66,705 explained_drops=68; exact_dups=0, segments_collapsed=68, rejects=0"
+    },
+    {
+      "layer": "silver",
+      "table": "claim_header[IP]",
+      "check": "amount_reconciliation",
+      "metric": "paid_bronze - paid_silver",
+      "value": 0.0,
+      "threshold": "= 0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": "bronze=639,260,180.00 silver=639,260,180.00"
+    },
+    {
+      "layer": "silver",
+      "table": "claim_header[OP]",
+      "check": "row_reconciliation",
+      "metric": "unexplained_row_gap",
+      "value": 0,
+      "threshold": "= 0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": "source=790,790 target=779,537 explained_drops=11,253; exact_dups=0, segments_collapsed=10,975, rejects=278"
+    },
+    {
+      "layer": "silver",
+      "table": "claim_header[OP]",
+      "check": "amount_reconciliation",
+      "metric": "paid_bronze - paid_silver",
+      "value": 0.0,
+      "threshold": "= 0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": "bronze=224,132,390.00 silver=224,132,390.00"
+    },
+    {
+      "layer": "silver",
+      "table": "claim_header[CAR]",
+      "check": "row_reconciliation",
+      "metric": "unexplained_row_gap",
+      "value": 0,
+      "threshold": "= 0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": "source=2,370,667 target=2,370,667 explained_drops=0; exact_dups=0, segments_collapsed=0, rejects=0"
+    },
+    {
+      "layer": "silver",
+      "table": "claim_header",
+      "check": "duplicate_keys",
+      "metric": "claim_id+claim_type",
+      "value": 0,
+      "threshold": "= 0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "silver",
+      "table": "claim_header",
+      "check": "null_rate",
+      "metric": "claim_id",
+      "value": 0.0,
+      "threshold": "<= 0.0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "silver",
+      "table": "claim_header",
+      "check": "null_rate",
+      "metric": "member_id",
+      "value": 0.0,
+      "threshold": "<= 0.0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "silver",
+      "table": "claim_header",
+      "check": "null_rate",
+      "metric": "claim_from_dt",
+      "value": 0.0,
+      "threshold": "<= 0.0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "silver",
+      "table": "claim_header",
+      "check": "null_rate",
+      "metric": "paid_amt",
+      "value": 0.0,
+      "threshold": "<= 0.0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "silver",
+      "table": "claim_header",
+      "check": "null_rate",
+      "metric": "provider_id",
+      "value": 0.001416,
+      "threshold": "<= 0.05",
+      "status": "PASS",
+      "severity": "warn",
+      "detail": ""
+    },
+    {
+      "layer": "silver",
+      "table": "claim_header",
+      "check": "null_rate",
+      "metric": "principal_dx",
+      "value": 3.8e-05,
+      "threshold": "<= 0.05",
+      "status": "PASS",
+      "severity": "warn",
+      "detail": ""
+    },
+    {
+      "layer": "silver",
+      "table": "claim_header",
+      "check": "referential_integrity",
+      "metric": "member_id -> member_year.member_id",
+      "value": 0.0,
+      "threshold": "orphan rate <= 0.0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": "0 orphan rows of 3,216,909"
+    },
+    {
+      "layer": "silver",
+      "table": "claim_diagnosis",
+      "check": "referential_integrity",
+      "metric": "claim_id -> claim_header.claim_id",
+      "value": 0.0,
+      "threshold": "orphan rate <= 0.0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": "0 orphan rows of 7,666,162"
+    },
+    {
+      "layer": "silver",
+      "table": "claim_header",
+      "check": "value_range",
+      "metric": "paid_amt < 0 rows",
+      "value": 2612,
+      "threshold": "= 0",
+      "status": "WARN",
+      "severity": "warn",
+      "detail": ""
+    },
+    {
+      "layer": "silver",
+      "table": "claim_header",
+      "check": "value_range",
+      "metric": "from_dt outside 2007-01-01..2010-12-31",
+      "value": 0,
+      "threshold": "= 0",
+      "status": "PASS",
+      "severity": "warn",
+      "detail": ""
+    },
+    {
+      "layer": "silver",
+      "table": "claim_diagnosis",
+      "check": "icd9_validity",
+      "metric": "invalid_code_rate",
+      "value": 6.7e-05,
+      "threshold": "<= 0.01",
+      "status": "PASS",
+      "severity": "warn",
+      "detail": "516 of 7,666,162"
+    },
+    {
+      "layer": "silver",
+      "table": "claim_diagnosis",
+      "check": "referential_integrity",
+      "metric": "icd9_code -> CMS ICD-9 v32 reference",
+      "value": 0.02687,
+      "threshold": "<= 0.10",
+      "status": "PASS",
+      "severity": "warn",
+      "detail": "205,992 of 7,666,162 codes not in the FY2015 billable list (3-digit/retired codes)"
+    },
+    {
+      "layer": "silver",
+      "table": "claim_header",
+      "check": "eligibility_coverage",
+      "metric": "claims outside covered member-months",
+      "value": 0.006676,
+      "threshold": "<= 0.05",
+      "status": "PASS",
+      "severity": "warn",
+      "detail": "21,477 claims (synthetic data perturbs coverage months)"
+    }
+  ]
+}
