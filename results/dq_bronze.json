@@ -1,0 +1,242 @@
+{
+  "summary": {
+    "generated_at_utc": "2026-10-23T18:57:52+00:00",
+    "checks": 21,
+    "pass": 21,
+    "warn": 0,
+    "fail": 0
+  },
+  "checks": [
+    {
+      "layer": "bronze",
+      "table": "beneficiary",
+      "check": "row_count",
+      "metric": "rows",
+      "value": 343644,
+      "threshold": ">= 1",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "bronze",
+      "table": "beneficiary",
+      "check": "quarantined_rows",
+      "metric": "rows",
+      "value": 0,
+      "threshold": "= 0",
+      "status": "PASS",
+      "severity": "warn",
+      "detail": ""
+    },
+    {
+      "layer": "bronze",
+      "table": "beneficiary",
+      "check": "row_reconciliation",
+      "metric": "unexplained_row_gap",
+      "value": 0,
+      "threshold": "= 0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": "source=343,644 target=343,644 explained_drops=0; raw CSV data lines vs loaded+quarantined"
+    },
+    {
+      "layer": "bronze",
+      "table": "beneficiary",
+      "check": "null_rate",
+      "metric": "DESYNPUF_ID",
+      "value": 0.0,
+      "threshold": "<= 0.0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "bronze",
+      "table": "beneficiary",
+      "check": "duplicate_keys",
+      "metric": "DESYNPUF_ID+bene_year",
+      "value": 0,
+      "threshold": "= 0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "bronze",
+      "table": "inpatient",
+      "check": "row_count",
+      "metric": "rows",
+      "value": 66773,
+      "threshold": ">= 1",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "bronze",
+      "table": "inpatient",
+      "check": "quarantined_rows",
+      "metric": "rows",
+      "value": 0,
+      "threshold": "= 0",
+      "status": "PASS",
+      "severity": "warn",
+      "detail": ""
+    },
+    {
+      "layer": "bronze",
+      "table": "inpatient",
+      "check": "row_reconciliation",
+      "metric": "unexplained_row_gap",
+      "value": 0,
+      "threshold": "= 0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": "source=66,773 target=66,773 explained_drops=0; raw CSV data lines vs loaded+quarantined"
+    },
+    {
+      "layer": "bronze",
+      "table": "inpatient",
+      "check": "null_rate",
+      "metric": "CLM_ID",
+      "value": 0.0,
+      "threshold": "<= 0.0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "bronze",
+      "table": "inpatient",
+      "check": "duplicate_keys",
+      "metric": "CLM_ID+SEGMENT",
+      "value": 0,
+      "threshold": "= 0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "bronze",
+      "table": "outpatient",
+      "check": "row_count",
+      "metric": "rows",
+      "value": 790790,
+      "threshold": ">= 1",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "bronze",
+      "table": "outpatient",
+      "check": "quarantined_rows",
+      "metric": "rows",
+      "value": 0,
+      "threshold": "= 0",
+      "status": "PASS",
+      "severity": "warn",
+      "detail": ""
+    },
+    {
+      "layer": "bronze",
+      "table": "outpatient",
+      "check": "row_reconciliation",
+      "metric": "unexplained_row_gap",
+      "value": 0,
+      "threshold": "= 0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": "source=790,790 target=790,790 explained_drops=0; raw CSV data lines vs loaded+quarantined"
+    },
+    {
+      "layer": "bronze",
+      "table": "outpatient",
+      "check": "null_rate",
+      "metric": "CLM_ID",
+      "value": 0.0,
+      "threshold": "<= 0.0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "bronze",
+      "table": "outpatient",
+      "check": "duplicate_keys",
+      "metric": "CLM_ID+SEGMENT",
+      "value": 0,
+      "threshold": "= 0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "bronze",
+      "table": "carrier",
+      "check": "row_count",
+      "metric": "rows",
+      "value": 2370667,
+      "threshold": ">= 1",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "bronze",
+      "table": "carrier",
+      "check": "quarantined_rows",
+      "metric": "rows",
+      "value": 0,
+      "threshold": "= 0",
+      "status": "PASS",
+      "severity": "warn",
+      "detail": ""
+    },
+    {
+      "layer": "bronze",
+      "table": "carrier",
+      "check": "row_reconciliation",
+      "metric": "unexplained_row_gap",
+      "value": 0,
+      "threshold": "= 0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": "source=2,370,667 target=2,370,667 explained_drops=0; raw CSV data lines vs loaded+quarantined"
+    },
+    {
+      "layer": "bronze",
+      "table": "carrier",
+      "check": "null_rate",
+      "metric": "CLM_ID",
+      "value": 0.0,
+      "threshold": "<= 0.0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "bronze",
+      "table": "carrier",
+      "check": "duplicate_keys",
+      "metric": "CLM_ID",
+      "value": 0,
+      "threshold": "= 0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "bronze",
+      "table": "inpatient",
+      "check": "schema_enforcement",
+      "metric": "delta_rejects_drift",
+      "value": true,
+      "threshold": "True",
+      "status": "PASS",
+      "severity": "error",
+      "detail": "[_LEGACY_ERROR_TEMP_DELTA_0007] A schema mismatch detected when writing to the Delta table (Table ID: 1bc97df2-a309-4848-875e-3356fce573d5)."
+    }
+  ]
+}
