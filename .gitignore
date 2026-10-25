@@ -1,0 +1,17 @@
+# Raw CMS files (~1.6 GB) are downloaded by scripts/download_data.py, never committed
+data/
+# Spark / Delta scratch
+spark-warehouse/
+metastore_db/
+derby.log
+*.crc
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.ipynb_checkpoints/
+.DS_Store
+.idea/
+.vscode/
+.airflow/
