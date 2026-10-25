@@ -1,0 +1,9 @@
+layer,table,check,metric,value,threshold,status,severity,detail
+gold,pmpm_monthly,amount_reconciliation,silver_paid - gold_paid,0.0,= 0,PASS,error,"silver=1,067,570,600.00 gold=1,067,570,600.00"
+gold,pmpm_monthly,duplicate_keys,service_month,0,= 0,PASS,error,
+gold,pmpm_monthly,null_rate,member_months,0.0,<= 0.0,PASS,error,
+gold,pmpm_monthly,null_rate,pmpm_total,0.0,<= 0.0,PASS,error,
+gold,readmission_index_stays,row_reconciliation,ip_claims - index_rows,0,= 0,PASS,error,
+gold,readmission_index_stays,plausibility,readmit_rate_30d,0.096712,between 0.02 and 0.40,PASS,warn,
+gold,provider_utilization,duplicate_keys,claim_type+provider_id,0,= 0,PASS,error,
+gold,top_diagnoses_by_cost,null_rate,description,0.0,<= 0.2,PASS,warn,
