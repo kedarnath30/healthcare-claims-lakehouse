@@ -1,0 +1,11 @@
+# Tested with Python 3.12, OpenJDK 17 (Temurin 17.0.20), and:
+# pyspark 3.5.3, delta-spark 3.2.1, pandas 3.1.0, pyarrow 26.0.0, matplotlib 3.11.2, pytest 9.1.1
+# Spark needs a Java 17 runtime on PATH (JAVA_HOME). Delta jars are pulled from Maven Central on first run.
+pyspark==3.5.3
+delta-spark==3.2.1
+pandas>=2.0
+pyarrow>=12
+matplotlib>=3.7
+pytest>=7.4
+# pyspark 3.5 toPandas() imports distutils, which Python 3.12 removed; setuptools provides the shim
+setuptools>=68
