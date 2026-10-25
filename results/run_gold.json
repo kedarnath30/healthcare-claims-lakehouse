@@ -1,0 +1,38 @@
+{
+  "layer": "gold",
+  "format": "delta",
+  "seconds": 140.6,
+  "tables": [
+    {
+      "table": "pmpm_monthly",
+      "rows": 36
+    },
+    {
+      "table": "pmpm_by_risk_segment",
+      "rows": 12
+    },
+    {
+      "table": "readmission_index_stays",
+      "rows": 66705
+    },
+    {
+      "table": "readmission_summary",
+      "rows": 22
+    },
+    {
+      "table": "top_diagnoses_by_cost",
+      "rows": 50
+    },
+    {
+      "table": "provider_utilization",
+      "rows": 506983
+    }
+  ],
+  "dq": {
+    "generated_at_utc": "2026-10-25T08:17:54+00:00",
+    "checks": 8,
+    "pass": 8,
+    "warn": 0,
+    "fail": 0
+  }
+}
