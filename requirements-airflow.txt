@@ -1,0 +1,2 @@
+# Only needed to load/run the DAG in dags/ (kept separate: Airflow pins many dependencies)
+apache-airflow>=2.9,<3
