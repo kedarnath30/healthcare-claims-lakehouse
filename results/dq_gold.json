@@ -1,0 +1,99 @@
+{
+  "summary": {
+    "generated_at_utc": "2026-10-25T08:17:54+00:00",
+    "checks": 8,
+    "pass": 8,
+    "warn": 0,
+    "fail": 0
+  },
+  "checks": [
+    {
+      "layer": "gold",
+      "table": "pmpm_monthly",
+      "check": "amount_reconciliation",
+      "metric": "silver_paid - gold_paid",
+      "value": 0.0,
+      "threshold": "= 0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": "silver=1,067,570,600.00 gold=1,067,570,600.00"
+    },
+    {
+      "layer": "gold",
+      "table": "pmpm_monthly",
+      "check": "duplicate_keys",
+      "metric": "service_month",
+      "value": 0,
+      "threshold": "= 0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "gold",
+      "table": "pmpm_monthly",
+      "check": "null_rate",
+      "metric": "member_months",
+      "value": 0.0,
+      "threshold": "<= 0.0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "gold",
+      "table": "pmpm_monthly",
+      "check": "null_rate",
+      "metric": "pmpm_total",
+      "value": 0.0,
+      "threshold": "<= 0.0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "gold",
+      "table": "readmission_index_stays",
+      "check": "row_reconciliation",
+      "metric": "ip_claims - index_rows",
+      "value": 0,
+      "threshold": "= 0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "gold",
+      "table": "readmission_index_stays",
+      "check": "plausibility",
+      "metric": "readmit_rate_30d",
+      "value": 0.096712,
+      "threshold": "between 0.02 and 0.40",
+      "status": "PASS",
+      "severity": "warn",
+      "detail": ""
+    },
+    {
+      "layer": "gold",
+      "table": "provider_utilization",
+      "check": "duplicate_keys",
+      "metric": "claim_type+provider_id",
+      "value": 0,
+      "threshold": "= 0",
+      "status": "PASS",
+      "severity": "error",
+      "detail": ""
+    },
+    {
+      "layer": "gold",
+      "table": "top_diagnoses_by_cost",
+      "check": "null_rate",
+      "metric": "description",
+      "value": 0.0,
+      "threshold": "<= 0.2",
+      "status": "PASS",
+      "severity": "warn",
+      "detail": ""
+    }
+  ]
+}
